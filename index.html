@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Haal-E-Mausam</title>
+    <style>
+        body {
+            height: 400px;
+            width: 450px;
+            background-color: rgb(17, 18, 18);
+            background-image: url("day.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-size: 25px;
+            color: rgb(218, 216, 216);
+            position: relative;
+            left: 40px;
+            top: 10px;
+            text-shadow:4px 4px 5px rgb(0, 0, 0);
+        }
+
+        h2 {
+            font-size: 15px;
+            color: rgb(218, 216, 216);
+            position: relative;
+            left: 200px;
+            top: 10px;
+            font-family: Lucida Handwriting;
+            text-shadow:4px 4px 5px rgb(0, 0, 0);
+        }
+
+        #d {
+            height: 450px;
+            width: 100%;
+            background-color: rgba(15, 12, 12, 0.698);
+            color: antiquewhite;
+
+        }
+
+        #cname {
+            position: relative;
+            left: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            width: 250px;
+
+        }
+
+        #search {
+            position: relative;
+            left: 30px;
+            width: 150px;
+            height: 19px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #list {
+            display: flex;
+            direction: wrap;
+        }
+
+        #wind {
+            height: 20px;
+            display: flex;
+            flex-flow: column;
+        }
+
+        li {
+            font-size: 15px;
+            height: 100px;
+            width: 100px;
+            border: 10px 10px beige;
+            font-weight: bold;
+        }
+
+        span {
+            font-size: 14px;
+            /*font-weight: bold;*/
+            /*position: relative;
+            left: 20px;*/
+            align-self: center;
+        }
+
+        img {
+            height: 60px;
+            width: 60px;
+            /*position: relative;
+            left:10px;*/
+            border-radius:15%;
+            box-shadow:5px 5px 5px black;
+        }
+
+        td {
+            vertical-align: top;
+            font-size: 16px;
+            align-content: center;
+            text-align: center;
+            text-shadow:4px 4px 5px rgb(0, 0, 0);
+        }
+        #temp_c{
+            font-size: larger;
+            align-self: center;
+            text-shadow:4px 4px 5px rgb(0, 0, 0);
+        }
+        #temp {
+            font-size: 20px;
+            
+        }
+
+        #temp_img {
+            height: 90px;
+            width: 90px;
+        }
+    </style>
+</head>
+
+<body id="b">
+    <div id="d">
+        <h1>Weather Report</h1>
+        <h2>(Haal-E-Mausam)</h2><br>
+        <hr>
+        <input type="text" placeholder=" City Name      " id="cname">
+        <input type="submit" value="search" id="search">
+        <br>
+        <hr>
+        <!-- <li>Cloud PCT : <span id="cloud_pct"></span></li>
+        <li>Temperature : <span id="temp"></span></li>
+        <li>Feels Like : <span id="feels_like"></span></li>
+        <li>Humidity : <span id="humidity"></span></li>
+        <li>Minimum Temperature : <span id="min_temp"></span></li>
+        <li>Maximum Temperature : <span id="max_temp"></span></li>
+        <li>Wind Speed : <span id="wind_speed"></span></li>
+        <li>Wind Degrees : <span id="wind_degrees"></span></li>
+        <li>Sunrise : <span id="sunrise"></span></li>
+        <li>Sunset : <span id="sunset"></span></li> -->
+        <table border="0" cellpadding="5" width="100%">
+            <tr>
+                <td width=120px rowspan="2" valign="top" align="center" id="temp">Temperature <br><br><br><span
+                        id="temp_c"></span><br><br><br><br><img src="temp.jpg" id="temp_img"></td>
+                <td>Pressure<br><span id="pressure_in"></span><br><br><img src="pressure.webp"></td>
+                <td>Humidity<br><span id="humidity"></span><br><br><img src="humidity.jpg"></td>
+                <td valign="top">Wind Speed <br><span id="wind_kph"></span><br><br>
+                    Wind Degree <br><span id="wind_degree"></span></td>
+            </tr>
+            <tr>
+                <!-- <td>Feels Like<br><span id="feelslike_c"></span><br><img src="feel.jpg"></td> -->
+                <td>Cloud PCT<br><span id="cloud"></span><br><br><img src="cloud.jpg"></td>
+                <td>Precipitation<br><span id="precip_in"></span><br><br><img src="precipitation.jpg"></td>
+                <td> Wind Direction <br><span id="wind_dir"></span><br><br><img src="wind.png"></td>
+            </tr>
+        </table>
+        <!-- <ul id="list">
+        <li id="temp">Temperature <br><span id="temp_c"></span><img src="temp.png"></li>
+            <li id="humid">Humidity<br><span id="humidity"></span><img src="humid.png"></li>
+                <ul id="wind">
+                    <li>Wind Speed <br><span id="wind_kph"></span></li>
+                    <li>Wind Degree <br><span id="wind_degree"></span></li>
+                    <li>Wind Direction <br><span id="wind_dir"></span><img src="wind.png"></li>
+                </ul>
+        </ul>
+        <ul id="list">
+            <li id="press">Pressure<br><span id="pressure_in"></span><img src="pressure.png"></li>
+            <li id="prec">Precipitation<br><span id="precip_in"></span><img src="precp.png"></li>
+            <li id="feel">Feels Like<br><span id="feelslike_c"></span><img src="temp.png"></li>
+            <li id="cl">Cloud PCT<br><span id="cloud"></span><img src="cloud.png"></li>
+            
+        </ul> -->
+        <script src="script.js" type="module"></script>
+    </div>
+</body>
+
+</html>
